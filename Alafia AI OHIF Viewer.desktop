@@ -1,0 +1,18 @@
+[Desktop Entry]
+Comment[en_US]=Alafia AI's OHIF Viewer for visualizing DICOM image formats
+Comment=Alafia AI's OHIF Viewer for visualizing DICOM image formats
+Exec=/usr/bin/xdg-open http://ohif.alafia
+GenericName[en_US]=Alafia AI's OHIF Viewer
+GenericName=Alafia AI's OHIF Viewer
+Icon=/opt/alafia/logo.png
+MimeType=
+Name[en_US]=Alafia OHIF Viewer
+Name=Alafia OHIF Viewer
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=
