@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  ohif:
+    image: ghcr.io/neurodesk/neurodesktop/neurodesktop-multiarch:latest
+    privileged: true
+    user: root
+    shm_size: '32gb'
+    volumes:
+      - /home/alafia/Desktop/alafia-apps/neurodesktop/data:/neurodesktop-storage
+    environment:
+      - NB_UID="$(id -u)"
+      - NB_GID="$(id -g)"
+    ports: 8888:8888
+    networks:
+      - caddy
+    labels:
+      caddy: neurodesk.alafia
+      caddy.reverse_proxy: "{{upstreams 8888}}"
+      caddy.tls: "internal"
+
+networks:
+  caddy:
+    external: true
