@@ -1,2 +1,6 @@
-caddy/data
-neurodesk/data	
+
+alafia-home/app/caddy-data/*
+!alafia-home/app/caddy-data/.gitkeep
+
+alafia-neurodesktop/app/neurodesktop-storage/*
+!alafia-neurodesktop/app/neurodesktop-storage/.gitkeep

@@ -11,16 +11,16 @@ const CONFIG = {
 	// └─┘┴ ┴└─┘┴└─┘└─┘
 
 	// General
-	name: '',
+	name: 'Alafia',
 	imageBackground: false,
 	openInNewTab: true,
 	twelveHourFormat: false,
 
 	// Greetings
-	greetingMorning: 'Good morning from Alafia.ai!',
-	greetingAfternoon: 'Good afternoon from Alafia.ai',
-	greetingEvening: 'Good evening from Alafia.ai',
-	greetingNight: 'Burning the midnight oil with Alafia.ai',
+	greetingMorning: 'Good morning from Alafia!',
+	greetingAfternoon: 'Good afternoon from Alafia',
+	greetingEvening: 'Good evening from Alafia',
+	greetingNight: 'Burning the midnight oil with Alafia',
 
 	// Layout
 	bentoLayout: 'bento', // 'bento', 'lists', 'buttons'
@@ -59,9 +59,9 @@ const CONFIG = {
 		},
 		{
 			id: '2',
-			name: 'Mail',
+			name: 'Neurodesk',
 			icon: 'mail',
-			link: 'https://mail.protonmail.com/',
+			link: 'https://neurodesk.alafia/',
 		},
 		{
 			id: '3',

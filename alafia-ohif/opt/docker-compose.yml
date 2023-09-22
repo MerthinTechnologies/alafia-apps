@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  ohif:
+    image: ohif/app:latest
+    container_name: ohif-viewer
+    # TODO: Porting to arm64 is trivial. Build and host variant and use that instead
+    platform: "linux/amd64"
+    volumes:
+      - ./app-config.js:/usr/share/nginx/html/app-config.js
+      - ./alafiaLogo.svg:/usr/share/nginx/html/alafiaLogo.svg
+    networks:
+      - caddy
+    labels:
+      caddy: ohif.alafia
+      caddy.reverse_proxy: "{{upstreams 80}}"
+      caddy.tls: "internal"
+    depends_on:
+      - binfmt
+      - caddy
+      - bento
+
+networks:
+  caddy:
+    external: true
