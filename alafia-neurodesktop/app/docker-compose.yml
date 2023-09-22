@@ -4,9 +4,9 @@ services:
     image: ghcr.io/neurodesk/neurodesktop/neurodesktop-multiarch:latest
     privileged: true
     user: root
-    shm_size: '32gb'
+    shm_size: '8gb'
     volumes:
-      - neurodesktop-storage:/neurodesktop-storage
+      - /opt/alafia/alafia-neurodesktop/neurodesktop-storage:/neurodesktop-storage
     environment:
       - NB_UID="$(id -u)"
       - NB_GID="$(id -g)"

@@ -1,0 +1,18 @@
+[Unit]
+Description=Alafia AI Neurodesktop Application Service
+Requires=docker.service
+Requires=alafia-home.service
+After=docker.service
+After=alafia-home.service
+StartLimitIntervalSec=60
+
+[Service]
+WorkingDirectory=/opt/alafia
+ExecStart=/usr/bin/docker compose -f alafia-home/docker-compose.yml -f alafia-neurodesktop/docker-compose.yml up
+ExecStop=/usr/bin/docker compose -f alafia-home/docker-compose.yml -f alafia-neurodesktop/docker-compose.yml down
+TimeoutStartSec=0
+Restart=unless-stopped
+StartLimitBurst=3
+
+[Install]
+WantedBy=multi-user.target
