@@ -1,6 +1,7 @@
+alafia-freesurfer/*.license
 
-alafia-home/app/caddy-data/*
-!alafia-home/app/caddy-data/.gitkeep
+alafia-start/caddy-data/*
+!alafia-start/caddy-data/.gitkeep
 
-alafia-neurodesktop/app/neurodesktop-storage/*
-!alafia-neurodesktop/app/neurodesktop-storage/.gitkeep
+alafia-neurodesktop/neurodesktop-storage/*
+!alafia-neurodesktop/neurodesktop-storage/.gitkeep

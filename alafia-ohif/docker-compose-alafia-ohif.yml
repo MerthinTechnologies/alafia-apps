@@ -6,18 +6,16 @@ services:
     # TODO: Porting to arm64 is trivial. Build and host variant and use that instead
     platform: "linux/amd64"
     volumes:
-      - ./app-config.js:/usr/share/nginx/html/app-config.js
-      - ./alafiaLogo.svg:/usr/share/nginx/html/alafiaLogo.svg
+      - /opt/alafia-ai/alafia-ohif/ohif-config.js:/usr/share/nginx/html/app-config.js
+      - /opt/alafia-ai/alafia-ohif/alafiaLogo.svg:/usr/share/nginx/html/alafiaLogo.svg
     networks:
       - caddy
+    ports:
+      - 3000:80
     labels:
       caddy: ohif.alafia
-      caddy.reverse_proxy: "{{upstreams 80}}"
+      caddy.reverse_proxy: "{{upstreams 3069}}"
       caddy.tls: "internal"
-    depends_on:
-      - binfmt
-      - caddy
-      - bento
 
 networks:
   caddy:

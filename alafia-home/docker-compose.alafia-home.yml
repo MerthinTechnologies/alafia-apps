@@ -1,0 +1,23 @@
+version: '3'
+
+services: 
+
+  bento:
+    container_name: alafia-home
+    image: lewisdoesstuff/bento:latest
+    platform: linux/amd64 # TODO: Port to arm64
+    restart: unless-stopped
+    labels:
+      caddy: home.alafia
+      caddy.reverse_proxy: "{{upstreams 80}}"
+      caddy.tls: "internal"
+    volumes:
+      - /opt/alafia-ai/alafia-home/bento-config.js:/usr/share/nginx/html/config.js
+    networks:
+      - caddy
+    ports:
+      - 1000:80
+
+networks:
+  caddy:
+    external: true

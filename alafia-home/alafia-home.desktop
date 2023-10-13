@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Alafia Browser Apps
+Terminal=false
+Icon=/opt/alafia-ai/alafia-home/alafia-home.svg
+Exec=/opt/alafia-ai/alafia-home/alafia-home.sh

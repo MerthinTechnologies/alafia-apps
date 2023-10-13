@@ -1,9 +1,6 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
 Type=Application
-Version=1.0
-Name=Alafia AI OHIF Viewer
-Comment=Browser tool for visualizing DICOM images
-Exec=/usr/bin/alafia-ohif
-GenericName=Alafia AI OHIF Viewer
-Icon=alafia-ohif
+Name=Alafia OHIF Viewer
+Terminal=false
+Icon=/opt/alafia-ai/alafia-ohif/alafia-ohif.svg
+Exec=/opt/alafia-ai/alafia-ohif/alafia-ohif.sh

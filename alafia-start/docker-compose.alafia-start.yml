@@ -1,0 +1,23 @@
+version: '3'
+
+services: 
+
+  caddy:
+    container_name: caddy
+    image: lucaslorentz/caddy-docker-proxy:ci-alpine
+    platform: linux/arm64
+    restart: unless-stopped
+    environment:
+      - CADDY_INGRESS_NETWORKS=caddy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./caddy-data:/data
+    networks:
+      - caddy
+    ports: 
+      - 80:80
+      - 443:443
+
+networks:
+  caddy:
+    external: true
