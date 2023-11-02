@@ -1,0 +1,3 @@
+[submodule "alafia-conn-toolbox"]
+	path = alafia-conn-toolbox
+	url = https://github.com/Alafia-Ai/alafia-conn-toolbox.git
