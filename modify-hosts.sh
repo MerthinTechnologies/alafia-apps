@@ -1,32 +1,56 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Define the URL and IP variables
+# Script to add or remove an IP-hostname pair from /etc/hosts
 
-#TODO: Needs to update variable names and get values of variables from args
+# Ensure the script is run with superuser privileges
+if [[ $EUID -ne 0 ]]; then
+  echo "This script must be run as root" 1>&2
+  exit 1
+fi
 
-check_root() {
-  # Check if the script is run as root
-  if [ "$EUID" -ne 0 ]; then
-    echo "Error: This script must be run as root"
-    exit 1
+# Ensure exactly three arguments are provided
+if [ "$#" -ne 3 ]; then
+  echo "Usage: $0 <ip-address> <hostname> <add|remove>" 1>&2
+  exit 1
+fi
+
+IP_ADDRESS=$1
+HOSTNAME=$2
+COMMAND=$3
+HOSTS_FILE="/etc/hosts"
+ENTRY="$IP_ADDRESS $HOSTNAME"
+
+# Function to add the IP-hostname pair
+add_entry() {
+  if grep -q "$ENTRY" "$HOSTS_FILE"; then
+    echo "Entry '$ENTRY' already exists in $HOSTS_FILE"
+  else
+    echo "$ENTRY" >> "$HOSTS_FILE"
+    echo "Entry '$ENTRY' added to $HOSTS_FILE"
   fi
 }
 
-# Call the function to check if the user is root
-check_root
+# Function to remove the IP-hostname pair
+remove_entry() {
+  if grep -q "$ENTRY" "$HOSTS_FILE"; then
+    sed -i "/$ENTRY/d" "$HOSTS_FILE"
+    echo "Entry '$ENTRY' removed from $HOSTS_FILE"
+  else
+    echo "Entry '$ENTRY' does not exist in $HOSTS_FILE"
+  fi
+}
 
-# Check if the URL exists in /etc/hosts
-if grep -q "$URL" /etc/hosts; then
-    echo "$URL exists in /etc/hosts, deleting the old entry."
-    # If the URL exists, delete the line containing the URL
-    sed -i.bak "/$URL/d" /etc/hosts
-else
-    echo "URL does not exist in /etc/hosts."
-fi
-
-# Append the URL and IP to the end of /etc/hosts
-echo "Appending new entry to /etc/hosts."
-echo "$IP $URL" | tee -a /etc/hosts
-
-echo "Done."
+# Determine whether to add or remove the entry
+case $COMMAND in
+  add)
+    add_entry
+    ;;
+  remove)
+    remove_entry
+    ;;
+  *)
+    echo "Invalid command: $COMMAND. Use 'add' or 'remove'." 1>&2
+    exit 1
+    ;;
+esac
 

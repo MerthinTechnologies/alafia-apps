@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Alafia CONN Toolbox
-Terminal=true
-Icon=/opt/alafia-ai/alafia-conn-tb/alafia-conn-tb.svg
-Exec=/opt/alafia-ai/alafia-conn-tb/alafia-conn-tb.sh
