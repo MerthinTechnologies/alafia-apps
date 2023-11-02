@@ -1,10 +1,19 @@
 # alafia-apps
 
-- make sure docker and docker compose are installed
-- install `sudo apt-get install -y qemu qemu-user-static binfmt-support` to get cross-architecture support
-- run `docker run --privileged --rm tonistiigi/binfmt --install all` to get the docker emulators
-- run all the compose files at once to kick off the : `sudo docker compose -f caddy/docker-compose.yml -f bento/docker-compose.yml -f ohif/docker-compose.yml -f neurodesk/docker-compose.yml`
-- put the contents of `etc-hosts` into `/etc/hosts`. This is so Caddy can resolve the *.alafia domains when launched by Bento
-- put `Alafia AI OHIF Viewer.desktop` in `/home/$USER/Desktop`. It opens the web browser to `home.alafia`.
-- put `opt-alafia-logo.png` in `/opt/alafia/logo.png`. `Alafia AI OHIF Viewer.desktop` requires an absolute path and /opt/alafia seems like a reasonable place to install everything to
+## Introduction
 
+This repository contains the files to build and deploy the following apps on Alafia's ARM64 workstation:
+
+- [Caddy & Bento](alafia-home)
+- [Freesurfer](alafia-freesurfer)
+- [FSL](alafia-fsl)
+- [CONN Toolbox](alafia-conn-toolbox)
+- [OHIF Viewer](alafia-ohif)
+- [Neurodesktop](alafia-neurodocker)
+
+## Usage
+
+1. [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
+2. Clone the repo with `git clone --recursive https://github.com/Alafia-Ai/alafia-apps.git`
+3. Install the apps by running `./install.sh` (you may need to make the script executable with `chmod +x install.sh`)
+4. Uninstall the apps by running `./install.sh --uninstall`
