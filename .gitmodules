@@ -1,3 +1,6 @@
 [submodule "alafia-conn-toolbox"]
 	path = alafia-conn-toolbox
 	url = https://github.com/Alafia-Ai/alafia-conn-toolbox.git
+[submodule "alafia-freesurfer"]
+	path = alafia-freesurfer
+	url = https://github.com/Alafia-Ai/alafia-freesurfer.git
