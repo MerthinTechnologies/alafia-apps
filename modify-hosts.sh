@@ -1,24 +1,10 @@
 #!/bin/bash
 
-# Script to add or remove an IP-hostname pair from /etc/hosts
-
-# Ensure the script is run with superuser privileges
-if [[ $EUID -ne 0 ]]; then
-  echo "This script must be run as root" 1>&2
-  exit 1
-fi
-
-# Ensure exactly three arguments are provided
-if [ "$#" -ne 3 ]; then
-  echo "Usage: $0 <ip-address> <hostname> <add|remove>" 1>&2
-  exit 1
-fi
-
-IP_ADDRESS=$1
-HOSTNAME=$2
-COMMAND=$3
-HOSTS_FILE="/etc/hosts"
-ENTRY="$IP_ADDRESS $HOSTNAME"
+# modify-hosts.sh - Script to add or remove an IP-hostname pair from /etc/hosts
+# 
+# This is used to map a service located somewhere on localhost to a normally non-
+# routable domain name ({app_name}.alafia). This makes launching the service in 
+# the browser and keeping track of Caddy server configuration much easier.
 
 # Function to add the IP-hostname pair
 add_entry() {
@@ -39,6 +25,24 @@ remove_entry() {
     echo "Entry '$ENTRY' does not exist in $HOSTS_FILE"
   fi
 }
+
+# Ensure the script is run with superuser privileges
+if [[ $EUID -ne 0 ]]; then
+  echo "This script must be run as root" 1>&2
+  exit 1
+fi
+
+# Ensure exactly three arguments are provided
+if [ "$#" -ne 3 ]; then
+  echo "Usage: $0 <ip-address> <hostname> <add|remove>" 1>&2
+  exit 1
+fi
+
+IP_ADDRESS=$1
+HOSTNAME=$2
+COMMAND=$3
+HOSTS_FILE="/etc/hosts"
+ENTRY="$IP_ADDRESS $HOSTNAME"
 
 # Determine whether to add or remove the entry
 case $COMMAND in
