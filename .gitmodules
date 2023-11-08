@@ -13,3 +13,6 @@
 [submodule "alafia-binfmt"]
 	path = alafia-binfmt
 	url = https://github.com/Alafia-Ai/alafia-binfmt.git
+[submodule "alafia-bento"]
+	path = alafia-bento
+	url = https://github.com/Alafia-Ai/alafia-bento.git
