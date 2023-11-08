@@ -16,3 +16,6 @@
 [submodule "alafia-bento"]
 	path = alafia-bento
 	url = https://github.com/Alafia-Ai/alafia-bento.git
+[submodule "alafia-ohif"]
+	path = alafia-ohif
+	url = https://github.com/Alafia-Ai/alafia-ohif.git
