@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Alafia FSL6
-Terminal=true
-Icon=/opt/alafia-ai/alafia-fsl/alafia-fsl.svg
-Exec=/opt/alafia-ai/alafia-fsl/alafia-fsl.sh

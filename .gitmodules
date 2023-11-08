@@ -4,3 +4,6 @@
 [submodule "alafia-freesurfer"]
 	path = alafia-freesurfer
 	url = https://github.com/Alafia-Ai/alafia-freesurfer.git
+[submodule "alafia-fsl"]
+	path = alafia-fsl
+	url = https://github.com/Alafia-Ai/alafia-fsl.git
