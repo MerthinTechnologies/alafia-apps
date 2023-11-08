@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Alafia Freesurfer
-Terminal=true
-Icon=/opt/alafia-ai/alafia-freesurfer/alafia-freesurfer.svg
-Exec=/opt/alafia-ai/alafia-freesurfer/alafia-freesurfer.sh
