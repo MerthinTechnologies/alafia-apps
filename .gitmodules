@@ -7,3 +7,9 @@
 [submodule "alafia-fsl"]
 	path = alafia-fsl
 	url = https://github.com/Alafia-Ai/alafia-fsl.git
+[submodule "alafia-caddy"]
+	path = alafia-caddy
+	url = https://github.com/Alafia-Ai/alafia-caddy.git
+[submodule "alafia-binfmt"]
+	path = alafia-binfmt
+	url = https://github.com/Alafia-Ai/alafia-binfmt.git
