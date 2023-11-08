@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Alafia OHIF Viewer
-Terminal=false
-Icon=/opt/alafia-ai/alafia-ohif/alafia-ohif.svg
-Exec=/opt/alafia-ai/alafia-ohif/alafia-ohif.sh
