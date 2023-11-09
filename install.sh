@@ -27,5 +27,5 @@ for d in "$DIR"/*/ ; do
     cd "$DIR"
 done
 
-echo "Installation complete."
+echo "Installation complete. Restart the computer to start Alafia network apps automatically."
 
