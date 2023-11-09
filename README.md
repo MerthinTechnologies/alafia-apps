@@ -13,10 +13,10 @@ This repository contains the files to build and deploy the following apps on Ala
 
 ## Usage
 
-1. [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
-2. Clone the repo with `git clone --recursive https://github.com/Alafia-Ai/alafia-apps.git`
-3. Move to `/opt` with `sudo mv alafia-apps /opt/alafia-ai`
-4. Install the apps by running `./install.sh` (you may need to make the script executable with `chmod +x install.sh`)
+1. Install [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Git LFS](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md#2-installing-packages)
+2. Clone the repos and LFS objects with `git clone --recursive https://github.com/Alafia-Ai/alafia-apps.git alafia-ai && git -C alafia-ai/alafia-conn-toolbox lfs fetch --all`
+3. Move to `/opt` with `sudo mv alafia-ai /opt/alafia-ai`
+4. Install the apps by running `./install.sh` (Requires `sudo`. Also, you may need to make the script executable with `chmod +x install.sh`)
 5. Uninstall the apps by running `./install.sh --uninstall`
 
 ## Noteworthy directories
