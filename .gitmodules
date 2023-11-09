@@ -19,3 +19,6 @@
 [submodule "alafia-ohif"]
 	path = alafia-ohif
 	url = https://github.com/Alafia-Ai/alafia-ohif.git
+[submodule "alafia-neurodesktop"]
+	path = alafia-neurodesktop
+	url = https://github.com/Alafia-Ai/alafia-neurodesktop.git
