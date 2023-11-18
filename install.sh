@@ -2,6 +2,9 @@
 
 # install.sh
 
+# Enable the building of cross-platform docker images
+docker run --privileged --rm tonistiigi/binfmt --install all
+
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
