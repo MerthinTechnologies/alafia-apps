@@ -1,0 +1,18 @@
+{
+  "projectId": "app-store",
+  "defaultEnvironment": "development",
+  "subsystemId": "qupath",
+  "config": {
+    "path": "configuration.json",
+    "format": "json"
+  },
+  "build": {
+    "steps": [
+      {
+        "name": "Building QuPath",
+        "command": "./gradlew clean build"
+      }
+    ],
+    "artifact": "./build"
+  }
+}
