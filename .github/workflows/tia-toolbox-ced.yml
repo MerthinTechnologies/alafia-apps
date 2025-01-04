@@ -3,7 +3,7 @@ name: Tia Toolbox to CED
 env:
   CED_ENVIRONMENT: development
   CED_CLI_TOKEN: ${{secrets.MERTHIN_TOKEN}}
-  CED_PROJECT_PATH: tia-toolbox
+  CED_PROJECT_PATH: alafia-tia-toolbox
 
 on:
   push:

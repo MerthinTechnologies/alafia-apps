@@ -3,7 +3,7 @@ name: QuPath to CED
 env:
   CED_ENVIRONMENT: development
   CED_CLI_TOKEN: ${{secrets.MERTHIN_TOKEN}}
-  CED_PROJECT_PATH: qupath
+  CED_PROJECT_PATH: alafia-qupath
 
 on:
   push:
