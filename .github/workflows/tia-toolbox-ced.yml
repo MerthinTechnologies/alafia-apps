@@ -1,4 +1,4 @@
-name: QuPath to CED
+name: Tia Toolbox to CED
 
 env:
   CED_ENVIRONMENT: development

@@ -1,4 +1,4 @@
-name: QuPath to CED
+name: UNI to CED
 
 env:
   CED_ENVIRONMENT: development
