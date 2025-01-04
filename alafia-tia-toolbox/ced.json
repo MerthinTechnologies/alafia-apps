@@ -1,0 +1,14 @@
+{
+  "projectId": "app-store",
+  "defaultEnvironment": "development",
+  "subsystemId": "tia-toolbox",
+  "config": {
+    "path": "configuration.json",
+    "format": "json"
+  },
+  "build": {
+    "steps": [
+    ],
+    "artifact": "./build"
+  }
+}

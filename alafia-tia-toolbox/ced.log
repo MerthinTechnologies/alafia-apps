@@ -1,0 +1,22 @@
+Error: ENOENT: no such file or directory, lstat 'build'
+    at Object.lstatSync (node:fs:1643:25)
+    at ZipCompressorService.compress (/usr/lib/node_modules/@ced/cli/lib/services/zip-compressor.service.js:38:27)
+    at PushArtifactCommandHandler.run (/usr/lib/node_modules/@ced/cli/lib/command-handlers/push-artifact-command-handler.js:49:58)
+    at Command.<anonymous> (/usr/lib/node_modules/@ced/cli/lib/commands/push-artifact.command.js:21:27)
+    at Command.listener [as _actionHandler] (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:922:31)
+    at Command._parseCommand (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1503:14)
+    at Command._dispatchSubcommand (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1443:18)
+    at Command._parseCommand (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1460:12)
+    at Command.parse (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1292:10)
+    at Object.<anonymous> (/usr/lib/node_modules/@ced/cli/lib/bin.js:98:25)
+
+Complete error data:
+{
+  "errno": -2,
+  "code": "ENOENT",
+  "syscall": "lstat",
+  "path": "build",
+  "name": "Error",
+  "message": "ENOENT: no such file or directory, lstat 'build'",
+  "stack": "Error: ENOENT: no such file or directory, lstat 'build'\n    at Object.lstatSync (node:fs:1643:25)\n    at ZipCompressorService.compress (/usr/lib/node_modules/@ced/cli/lib/services/zip-compressor.service.js:38:27)\n    at PushArtifactCommandHandler.run (/usr/lib/node_modules/@ced/cli/lib/command-handlers/push-artifact-command-handler.js:49:58)\n    at Command.<anonymous> (/usr/lib/node_modules/@ced/cli/lib/commands/push-artifact.command.js:21:27)\n    at Command.listener [as _actionHandler] (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:922:31)\n    at Command._parseCommand (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1503:14)\n    at Command._dispatchSubcommand (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1443:18)\n    at Command._parseCommand (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1460:12)\n    at Command.parse (/usr/lib/node_modules/@ced/cli/node_modules/commander/index.js:1292:10)\n    at Object.<anonymous> (/usr/lib/node_modules/@ced/cli/lib/bin.js:98:25)"
+}
