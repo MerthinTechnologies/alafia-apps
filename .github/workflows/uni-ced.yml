@@ -3,7 +3,7 @@ name: UNI to CED
 env:
   CED_ENVIRONMENT: development
   CED_CLI_TOKEN: ${{secrets.MERTHIN_TOKEN}}
-  CED_PROJECT_PATH: uni
+  CED_PROJECT_PATH: alafia-uni
 
 on:
   push:
