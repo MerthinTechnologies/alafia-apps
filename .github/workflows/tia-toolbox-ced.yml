@@ -1,0 +1,21 @@
+name: QuPath to CED
+
+env:
+  CED_ENVIRONMENT: development
+  CED_CLI_TOKEN: ${{secrets.MERTHIN_TOKEN}}
+  CED_PROJECT_PATH: tia-toolbox
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "alafia-tia-toolbox/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v2
+      - uses: MerthinTechnologies/push-ced-source-action@v1
